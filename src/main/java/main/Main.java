@@ -16,8 +16,12 @@ public class Main {
         User ivan = new User(1, "Иван", "Вертилецкий" , "19.11.1998", 123456, "client");
         userRepository.saveUser(ivan);
         Book dune = new Book(1, "Фантастика", "Дюна");
+        Book harryPotter1 = new Book(2, "Фантастика", "Гарри Поттер и Тайная комната");
         bookRepository.addBook(dune);
+        bookRepository.addBook(harryPotter1);
         accounting.loanBook(ivan.getId(), dune.getId());
+        accounting.loanBook(ivan.getId(), harryPotter1.getId());
         accounting.getUserLoans(ivan.getId());
+        accounting.returnBook(ivan.getId(), dune.getId());
     }
 }

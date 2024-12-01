@@ -2,6 +2,7 @@ package dao;
 
 import model.Book;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,5 +18,9 @@ public class BookRepository {
 
     public Book getBook(Integer id) {
         return books.get(id);
+    }
+
+    public Collection<Book> returnAllBooks() {
+        return books.values();
     }
 }
