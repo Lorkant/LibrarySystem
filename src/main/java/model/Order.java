@@ -1,9 +1,10 @@
 package model;
 
 public class Order {
-    int userId;
-    int bookId;
-    String date;
+    private int userId;
+    private int bookId;
+    private String date;
+    private boolean finished = false;
 
     public Order(int userId, int bookId, String date) {
         this.userId = userId;
@@ -33,5 +34,13 @@ public class Order {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public boolean isFinished() {
+        return finished;
+    }
+
+    public void setFinished(boolean finished) {
+        this.finished = finished;
     }
 }

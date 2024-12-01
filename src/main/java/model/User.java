@@ -3,16 +3,26 @@ package model;
 public class User {
     private int id;
     private String name;
+    private String lastname;
     private String birthday;
     private int passportNumber;
     private String role;
 
-    public User(int id, String name, String birthday, int passportNumber, String role) {
+    public User(int id, String name, String lastname, String birthday, int passportNumber, String role) {
         this.id = id;
         this.name = name;
+        this.lastname = lastname;
         this.birthday = birthday;
         this.passportNumber = passportNumber;
         this.role = role;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public int getId() {
